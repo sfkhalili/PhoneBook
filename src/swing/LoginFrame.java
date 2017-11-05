@@ -118,16 +118,14 @@ public class LoginFrame extends JFrame {
 					try {
 						String flag=client.validation(name, pass);
 					System.out.println(flag);
-						if (flag.equals("true")) {
+						if (flag.equals("welcome")) {
 							dispose();
 							OptionalLogin ud = new OptionalLogin();
 							ud.setVisible(true);
 						}
 						else
 							JOptionPane.showMessageDialog(contentPane, "Your username or password invalid");
-						client.saverole(name);
-						System.out.println("save rolemap sucsseful");
-					} catch (UnsupportedOperationException | IOException l) {
+					} catch (UnsupportedOperationException l) {
 						// TODO Auto-generated catch block
 						l.printStackTrace();
 					}}
@@ -167,7 +165,7 @@ public class LoginFrame extends JFrame {
 					List<Contact> list = gson.fromJson(contactshowall, type);
 					// return list;
 					// }
-					System.out.println(list.size());
+				//	System.out.println(list.size());
 					Object[][] data = new Object[list.size()][6];
 					for (int i = 0; i < list.size(); i++) {
 

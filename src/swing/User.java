@@ -12,7 +12,6 @@ import javax.persistence.Table;
 @Table(name="user")
 public  class User {
 	
-	
 	@Id
 	@Column(name="username" ,updatable = false, nullable = false)	
 	private String username;
@@ -51,7 +50,4 @@ public  class User {
 	public User(){
 		
 	}
-
-
-
 }
